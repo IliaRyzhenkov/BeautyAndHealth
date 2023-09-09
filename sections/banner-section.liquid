@@ -1,0 +1,94 @@
+{{ 'banner-section.css' | asset_url | stylesheet_tag }}
+
+<style>
+  #shopify-section-{{ section.id }} {
+    margin-top: {{ section.settings.margin_top }}px;
+    margin-bottom: {{ section.settings.margin_bottom }}px;
+  }
+
+ #shopify-section-{{ section.id }} .banner-section{
+    min-height: {{ section.settings.min_height }}px;
+  }
+
+  #shopify-section-{{ section.id }} .banner-section__content{
+    color: {{ section.settings.content_color }};
+  }
+
+</style>
+
+<div class="banner-section">
+
+  <img
+    src="{{ section.settings.image | img_url: 'master' }}"
+    alt="{{ section.settings.title }}"
+    class="banner-section__bg">
+
+  <div class="banner-section__content">
+
+    <h2 class="banner-section__title banner-section__title--uppercase">{{ section.settings.title }}</h2>
+    <div class="banner-section__subtitle">{{ section.settings.title }}</div>
+
+  </div>
+
+</div>
+
+
+{% schema %}
+  {
+    "name": "Banner",
+    "settings": [
+      {
+        "type": "range",
+        "id": "min_height",
+        "min": 400,
+        "max": 800,
+        "step": 10,
+        "label": "Banner Height",
+        "default": 500
+      }, 
+      {
+        "type": "range",
+        "id": "margin_top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "label": "Margin Top",
+        "default": 0
+      }, 
+      {
+        "type": "range",
+        "id": "margin_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "label": "Margin Bottom",
+        "default": 0
+      }, 
+      {
+        "type": "color",
+        "id": "content_color",
+        "label": "Content Color",
+        "default": "#FFFFFF"    
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      }, {
+        "type": "richtext",
+        "id": "subtitle",
+        "label": "Subtitle"
+      }, {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image",
+        "info": "Size Recommended 1920x850"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Banner"
+      }
+    ]
+  }
+{% endschema %}
