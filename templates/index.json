@@ -11,9 +11,25 @@
         "subtitle": "<p>фываыфва<\/p>",
         "image": "shopify:\/\/shop_images\/Soap-Image5.png"
       }
+    },
+    "923a855e-977e-4f05-bd4b-50435b94ca09": {
+      "type": "section-with-text",
+      "settings": {
+        "padding_top": 40,
+        "padding_bottom": 69,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "content_width": 600,
+        "background": "#FFFFFF",
+        "title": "Title Section",
+        "content": "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit perspiciatis iste officia.<\/p>",
+        "btn_name": "Lern More",
+        "button_link": ""
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "923a855e-977e-4f05-bd4b-50435b94ca09"
   ]
 }

@@ -1,6 +1,26 @@
 {
   "current": {
-    "content_for_index": []
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "sticky_header": true,
+          "max_width": 1300,
+          "height": 80,
+          "bg_color": "#FFFFFF",
+          "logo": "shopify:\/\/shop_images\/Soap-Image3.png",
+          "menu": ""
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
   },
   "presets": {
     "Default": {
